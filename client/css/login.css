@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --blueberry: #6b7a8f67;
+    --apple-core: #dcc7aa;
+
+    --white: #fff;
+    --black: #000;
+
+    --sand-tan: #e1b382;
+    --sand-tan-shadow: #c89666;
+    --nigth-blue: #2d545e;
+    --nigth-blue-shadow: #12343b;
+}
+
+.fa-eye{
+	position: absolute;
+	top: 43%;
+	right: 3%;
+	cursor: pointer;
+	color: var(--nigth-blue-shadow);
+}
+form i {
+	cursor: pointer;
+}
+body{
+	font-family: Poppins;
+	color: #000;
+	margin: 0;
+	background: #dcc7aa;
+}
+*,
+:after, :before {
+    box-sizing: border-box
+}
+a {
+    color: inherit;
+    text-decoration: none
+}
+input[type="checkbox"] {
+	accent-color: var(--nigth-blue-shadow);
+}
+.login__wrapper {
+	width: 100%;
+	max-width: 1920px;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.login__image {
+	width: 50%;
+	height: 100%;
+	background: url('../images/login/catlog.jpg') no-repeat center;
+	background-size: cover;
+}
+.login__content {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	padding: 50px 0px 0px 0px;
+}
+.sign-in__form,
+.sign-up__form {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	transition: all .4s linear;
+	margin-top: 65px;
+}
+.sign-in, .sign-up {
+	display:none;
+}
+.view {
+	font-size: 22px;
+	margin-right: 15px;
+	padding-bottom: 5px;
+	margin: 0 15px 10px 0;
+	display: inline-block;
+	border-bottom: 2px solid transparent;
+}
+.sign-in:checked + .view,
+.sign-up:checked + .view {
+	color: #000;
+	text-decoration: underline;
+}
+.login__form {
+	width: 65%;
+	min-height: 345px;
+	position: relative;
+	margin-top: 10px;
+}
+.input-grp {
+	margin-bottom: 0px;
+	position: relative;
+}
+.label, .input, .button{
+	width: 100%;
+	color: #000;
+	display: block;
+	padding-bottom: 4px;
+}
+.input {
+	font-size: 18px;
+	border: none;
+	border-radius: 4px;
+	padding: 12px 4px;
+	outline: none;
+	background: transparent;
+	background-color: rgba(255, 255, 255, .4);
+	border: 1px solid rgba(255, 255, 255, .4);
+	transition: border-color 0.4s ease-out;
+}
+.button {
+	padding: 15px 2px;
+	outline: none;
+	border: none;
+}
+.input:hover {
+	background-color: rgba(255, 255, 255, .2);
+	border: 1px solid rgba(255, 255, 255, .2);
+}
+.invalid-title {
+	visibility: hidden;
+	font-size: 12px;
+	color: rgb(180, 10, 10);
+}
+.label {
+	color: #000;
+	font-size: 12px;
+}
+.button {
+	font-size: 16px;
+	font-weight: 700;
+}
+.check:checked + label{
+	color: #000;
+}
+.sign-in:checked + .view + .sign-up + .view + .sign-in__form  {
+	transform: rotate(0);
+}
+ .sign-up:checked + .view + .sign-in__form + .sign-up__form {
+	transform: rotate(0);
+}
+.form-link label {
+	cursor: pointer;
+	padding-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: var(--white);
+    border-radius: 5px;
+    transition: background-color 0.2s ease 0s;
+    background-color: var(--nigth-blue-shadow);
+	margin: 8px 0px;
+}
+.button:hover {
+    background-color: var(--blueberry);
+}
+
+@media (max-width: 767.98px) {
+    .login__wrapper {
+		width: 100%;
+		position: relative;
+	}
+	.login__image {
+		width: 100%;
+		height: 100%;
+		background: url('../images/login/phone.jpg') no-repeat center;
+		background-size: cover;
+	}
+	.login__content {
+		width: 100%;
+		margin: 0;
+		padding-top: 95px;
+		position: absolute;
+	}
+	body, .check:checked + label, .label {
+		color: var(--black);
+	}
+	.label {
+		color: rgba(255, 255, 255, 0.6);
+	}
+	.input {
+		background-color: rgba(255, 255, 255, 0.6);
+		border: 1px solid rgba(255, 255, 255, 0.6);
+	}
+	.sign-in:checked + .view,
+	.sign-up:checked + .view {
+		color: var(--white);
+		border-color: var(--white);
+		text-decoration: none;
+	}
+}
+.show {
+	visibility: visible;
+}
+.valid {
+	border-color: rgb(5, 115, 5);
+	background-color: rgb(5, 115, 5, .1);
+}
+.invalid {
+	border-color: rgb(180, 10, 10);
+	background-color: rgba(180, 10, 10, .1);
+}

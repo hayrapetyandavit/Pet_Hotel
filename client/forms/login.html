@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Manul Pet Hotel</title>
+</head>
+<body>
+	<div class="login__wrapper">
+        <div class="login__image"></div>
+        <div class="login__content">
+            <div class="login__form">
+                <input id="view-1" type="radio" name="view" class="sign-in" checked>
+                <label for="view-1" class="view">Sign In</label>
+                <input id="view-2" type="radio" name="view" class="sign-up">
+                <label for="view-2" class="view">Sign Up</label>
+                <form class="sign-in__form" name="sign-in" action="/signin" method="post">
+                    <div class="input-grp">
+                        <label for="user-in" class="label">Email</label>
+                        <input
+                         id="email-in"
+                         name="email"
+                         type="email"
+                         class="input"
+                         title="Email must be user@gmail.com form"
+                         required>
+                         <span class="invalid-title user-in__title">Please enter a valid email address!</span>
+                    </div>
+                    <div class="input-grp">
+                        <label for="pass-in" class="label">Password</label>
+                        <input
+                         id="pass-in"
+                         name="password"
+                         type="password"
+                         class="input"
+                         data-type="password??"
+                         title="password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                         <span class="invalid-title pass-in__title">Please enter correct password!</span>
+                         <i class="fa-solid fa-eye" id="eye-pass-in"></i>
+                    </div>
+                    <div class="input-grp">
+                        <input type="submit" class="button" value="Sign In" >
+                    </div>
+                </form>
+                <form action="/signup" name="sign-up" class="sign-up__form"  method="post">
+                    <div class="input-grp">
+                        <label for="user-up" class="label">Name</label>
+                        <input
+                         id="name-up"
+                         name="name"
+                         type="text"
+                         class="input"
+                         title="Name must only contain letters. e.g. Tommy"
+                         required>
+                         <span class="invalid-title user-up__title">Please enter your name!</span>
+                    </div>
+                    <div class="input-grp">
+                        <label for="email" class="label">Email Address</label>
+                        <input 
+                         id="email-up"
+                         name="email"
+                         type="email"
+                         class="input"
+                         title="Email must be user@gmail.com form"
+                         required>
+                         <span class="invalid-title email__title">Please enter a valid email address!</span>
+                    </div>
+                    <div class="input-grp">
+                        <label for="phone" class="label">Phone number +(374)-- --- ---</label>
+                        <input
+                         id="phone-up"
+                         name="phone"
+                         type="tel"
+                         class="input"
+                         title="Phone number must be 55 123 456 form"
+                         required>
+                         <span class="invalid-title phone__title">Please enter a valid phone number!</span>
+                    </div>
+                    <div class="input-grp">
+                        <label for="pass-up" class="label">Password</label>
+                        <input
+                         id="pass-up"
+                         name="password"
+                         type="password"
+                         class="input"
+                         data-type="password"
+                         title="password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                         required>
+                        <span class="invalid-title pass-up__title">Please enter correct password!</span>
+                        <i class="fa-solid fa-eye" id="eye-pass-up"></i>
+                    </div>
+                    <div class="input-grp">
+                        <input type="submit" class="button" value="Sign Up" disabled>
+                    </div>
+                    <div class="form-link">
+                        <label for="view-1">Already have an account?</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../js/modules/validation.js" type="module"></script>
+    <script src="../js/modules/togglePassVisibility.js" type="module"></script>
+</body>
+</html>

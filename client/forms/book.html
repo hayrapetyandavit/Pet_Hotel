@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/book.css">
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+    <title>Manul Pet Hotel</title>
+</head>
+<body>
+	<div class="book__wrapper">
+        <div class="book__image"></div>
+        <div class="book__content">
+            <div class="book__form">
+                <h3>Booking Form</h3>
+                <form action="/book" name="book-form" class="book__form book__form-book"  method="post">
+                    <div class="input-grp name-grp">
+                        <div class="grp">
+                            <label for="name" class="label">Your name</label>
+                            <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            class="input"
+                            title="Name must only contain letters. e.g. Tommy"
+                            required>
+                         <span class="invalid-title user-up__title">Please enter your name!</span>
+                        </div>
+                        <div class="grp">
+                            <label for="pet-name" class="label">Pet's name</label>
+                            <input
+                            id="pet-name"
+                            name="petname"
+                            type="text"
+                            class="input"
+                            title="Username must only contain letters."
+                            required>
+                         <span class="invalid-title user-up__title">Please enter pet's name!</span>
+                        </div>
+                    </div>
+                    <div class="input-grp address-grp">
+                        <div class="grp">
+                            <label for="address" class="label">Address/City/Street</label>
+                            <input
+                            id="address"
+                            name="address"
+                            type="text"
+                            class="input"
+                            title="Address must only contain letters and numbers. e.g. Yerevan Amiryan 60"
+                            required>
+                         <span class="invalid-title email__title">Please enter your address!</span>
+                        </div>
+                    </div>
+                    <div class="input-grp contacts-grp">
+                        <div class="grp">
+                            <label for="book-email" class="label">Email Address</label>
+                            <input 
+                            id="book-email"
+                            name="email"
+                            type="email"
+                            class="input"
+                            title="Email must be user@gmail.com form"
+                            required>
+                         <span class="invalid-title email__title">Please enter a valid email address!</span>
+                        </div>
+                         <div class="grp">
+                            <label for="book-phone" class="label">Phone +(374) _</label>
+                            <input
+                             id="book-phone"
+                             name="phone"
+                             type="tel"
+                             class="input"
+                             title="Phone number must be 55 123 456 form"
+                             required>
+                         <span class="invalid-title phone__title">Please enter a valid phone number!</span>
+                        </div>
+                    </div>
+                    <div class="input-grp  check-grp">
+                        <div class="grp">
+                            <label for="book-check-in" class="label">Check-in</label>
+                            <input
+                             placeholder=""
+                             type="text"
+                             onfocus="(this.type='date')"
+                             id="book-check-in"
+                             class="check "
+                             name="checkin"
+                             required>
+                            <span class="invalid-title check-out__title">Please enter a valid date!</span>
+                        </div>
+                        <div class="grp">
+                            <label for="book-check-out" class="label">Check-out</label>
+                            <input
+                             placeholder=""
+                             type="text"
+                             onfocus="(this.type='date')"
+                             id="book-check-out"
+                             class="check"
+                             name="checkout"
+                             required>
+                         <span class="invalid-title check-out__title">Please enter a valid date!</span>
+                        </div>
+                    </div>
+                    <div class="input-grp select-grp">
+                        <div class="grp">
+                            <label for="select-pet" class="label">Select pet type</label>
+                            <select name="pettype" id="select-pet" class="select" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="Dog up to 10kg">Dog up to 10kg</option>
+                                <option value="Dog from 10kg to 20kg">Dog from 10kg to 20kg</option>
+                                <option value="Dog over 20kg">Dog over 20kg</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                         <span class="invalid-title select__title">Please select pet type!</span>
+                       </div>
+                        <div class="grp">
+                            <label for="select-food" class="label">Select food</label>
+                            <select name="petfood" id="select-food" class="select" reqired>
+                                <option value="" disabled selected hidden></option>
+                                <option value="royal-canin">Royal canin</option>
+                                <option value="monge">Monge</option>
+                                <option value="own">I will provide</option>
+                            </select>
+                         <span class="invalid-title select__title">Please select food type!</span>
+                        </div>
+                    </div>
+                    <div class="input-grp textarea-grp">
+                        <div class="grp">
+                            <label for="book-requests" class="label">Special needs, requests or requirements</label>
+                            <textarea name="requests" id="book-requests"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-grp agree-grp">
+                        <div class="grp">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree" class="label">I have read and agree with <a href="/index.html#important-section" class="inp-info">important information</a></label>
+                        </div>
+                    </div>
+                    <div class="input-grp">
+                        <input type="submit" class="button button__book" value="Book" disabled>
+                    </div>
+                </form>
+            </div>
+            <div class="show-msg">
+                <div class="show-msg__content"></div>
+                <img src="../images/close.png" class="content-close" alt="">
+            </div>
+        </div>
+        <div class="show-msg">
+            <div class="show-msg__content"></div>
+            <img src="../images/close.png" class="content-close" alt="">
+        </div>
+    </div>
+    <script src="../js/modules/priceMessage.js" type="module"></script>
+    <script src="../js/modules/nextBook.js" type="module"></script>
+    <script src="../js/modules/validation.js" type="module"></script>
+</body>
+</html>

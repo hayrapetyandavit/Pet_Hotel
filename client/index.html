@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#12343b" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/ads.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/burger.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/trust.css">
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/camera.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/important.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="icon" href="./images/icon.png" type="image/x-icon">
+    <title>Manul Pet hotel</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="open" class="header">
+            <div id="close" class="header__container">
+                <div href="" class="header__logo">
+                    <img src="./images/logo.png" alt="Logo">
+                </div>
+                <div class="header__menu menu">
+                    <nav id="menu" class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#home-section" class="menu__link">Home</a></li>
+                            <li class="menu__item"><a href="#services-section" class="menu__link">Services</a></li>
+                            <li class="menu__item"><a href="#about-us-section" class="menu__link">About Us</a></li>
+                            <li class="menu__item"><a href="#gallery-section" class="menu__link">Gallery</a></li>
+                            <li class="menu__item"><a href="#important-section" class="menu__link">Important</a></li>
+                            <li class="menu__item menu__item-signin"><a href="./forms/login.html" class="menu__link sign-in-link" target="_parent">Sign In</a></li>
+                            <li class="menu__item"><a href="/signout" class="menu__link sign-out-link">Sign Out</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__button">
+                    <a href="./forms/book.html" class="button button__book" target="_parent">BOOK NOW</a>
+                    <a href="#open" class="icon-menu"><span></span></a>
+                    <a href="#close" class="close-icon-menu"></a>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section id="home-section" class="home">
+                <div class="home__container">
+                    <div class="home__content">
+                    </div>
+                    <div class="home-book__block">
+                        <form id="home-book__form" name="next">
+                            <div class="input-select-group">
+                                <input
+                                 placeholder="check - in"
+                                 type="text"
+                                 onfocus="(this.type='date')"
+                                 id="home-check-in"
+                                 name="home-check-in"
+                                 required>
+                                <input
+                                 placeholder="check - out"
+                                 type="text"
+                                 onfocus="(this.type='date')"
+                                 id="home-check-out"
+                                 name="home-check-out"
+                                 required>
+                                <select name="current-role" id="home-dropdown" required>
+                                    <option value="" disabled selected hidden>Select pet type</option>
+                                    <option value="Dog up to 10kg">Dog up to 10kg</option>
+                                    <option value="Dog from 10kg to 20kg">Dog from 10kg to 20kg</option>
+                                    <option value="Dog over 20kg">Dog over 20kg</option>
+                                    <option value="Cat">Cat</option>
+                                </select>
+                                <input type="submit" id="submit-check" class="button button__next" value="Next">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <a href="#home-section">
+                    <img src="./images/footer/move_up.png" alt="Anchor up icon" class="move-up" title="move up">
+                </a>
+            </section>
+            <section class="trust">
+                <div class="trust__container">
+                    <div class="trust__content">
+                        <div class="trust__card">
+                            <div class="card__icon">
+                                <img src="./images/trust/home.png" alt="Home icon">
+                            </div>
+                            <div class="card__title title">Friendly Room</div>
+                            <div class="card__subtitle subtitle">
+                                Our rooms are very comfortable and cosy. Your pet will feel itself like at home.
+                            </div>
+                        </div>
+                        <div class="trust__card">
+                            <div class="card__icon">
+                                <img src="./images/trust/food.png" alt="Food icon">
+                            </div>
+                            <div class="card__title title">Best Food</div>
+                            <div class="card__subtitle subtitle">
+                                We are choosing the best quality premium class healthy food for our pets.
+                            </div>
+                        </div>
+                        <div class="trust__card">
+                            <div class="card__icon">
+                                <img src="./images/trust/help.png" alt="Heart icon">
+                            </div>
+                            <div class="card__title title">Vet Help</div>
+                            <div class="card__subtitle subtitle">
+                                Your pet will get professional veterinary help if needed during stay.
+                            </div>
+                        </div>
+                        <div class="trust__card">
+                            <div class="card__icon">
+                                <img src="./images/trust/cal.png" alt="Calendar icon">
+                            </div>
+                            <div class="card__title title">Easy Book</div>
+                            <div class="card__subtitle subtitle">
+                                Just few clicks and your lovely friend will be in good hands during your absence
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="services-section" class="services">
+                <div class="services__container">
+                    <div class="services__content">
+                        <div class="services__grid services__grid-title">
+                            <h2 class="services__title title">Boarding</h2>
+                            <p class="services__subtitle subtitle">
+                                If you are short in time, we can come and pick up your pet from your home<span id="boarding-dots" class="dots">...</span>
+                                <span id="boarding-more" class="more">. We are arranging boarding in our special cars which have comfortable rooms. 
+                                Working hours of our boarding staff 
+                                are flexible, so we can pick up your lovely pet whenever its comfortable for you.</span>
+                            </p>
+                            <span id="boarding" class="more__link">Read more</span>
+                        </div>
+                        <div class="services__grid services__grid-image">
+                            <div class="image-wrapper">
+                                <img src="./images/services/boarding.jpg" alt="Pet Boarding">
+                            </div>
+                        </div>
+                        <div class="services__grid services__grid-image">
+                            <div class="image-wrapper">
+                                <img src="./images/services/grooming.jpg" alt="Pet Grooming">
+                            </div>
+                        </div>
+                        <div class="services__grid services__grid-title">
+                            <h2 class="services__title title">Grooming</h2>
+                            <p class="services__subtitle subtitle">
+                                If your pet needs freshening up, we can help with that<span id="grooming-dots" class="dots">...</span>
+                                <span id="grooming-more" class="more">. Grooming service can be aded to your pet stay in our hotel and you can be 
+                                sure that you will see the best-looking, 
+                                most fluffy and good smelling pet when you are back.
+                            </p>
+                            <span id="grooming" class=" more__link">Read more</span>
+                        </div>
+                        <div class="services__grid services__grid-title">
+                            <h2 class="services__title title">Playing</h2>
+                            <p class="services__subtitle subtitle">
+                                All our guest like our speciuos play areas where our pet lover staff is playing 
+                                with each pet in our hotel<span id="playing-dots" class="dots">...</span>
+                                <span id="playing-more" class="more">. We have special program for each type of pet and stay 
+                                includes playing 2 times a day. No pet is sad during the stay at our hotel and even 
+                                some of them want to stay longer when the family comes to pick up them. 
+                            </p>
+                            <span id="playing" class=" more__link">Read more</span>
+                        </div>
+                        <div class="services__grid services__grid-image">
+                            <div class="image-wrapper">
+                                <img src="./images/services/playing.jpg" alt="Pet Playing">
+                            </div>
+                        </div>
+                        <div class="services__grid services__grid-image">
+                            <div class="image-wrapper">
+                                <img src="./images/services/feeding.jpg" alt="Pet Feeding">
+                            </div>
+                        </div>
+                        <div class="services__grid services__grid-title">
+                            <h2 class="services__title title">Feeding</h2>
+                            <p class="services__subtitle subtitle">
+                                We choose the best premium class food for your pets<span id="feeding-dots" class="dots">...</span>
+                                <span id="feeding-more" class="more">. We are feeding all the pets 
+                                following special diet if they need and all the food portions are approved by veterinarians.
+                            </p>
+                            <span id="feeding" class=" more__link">Read more</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about-us-section" class="about-us">
+                <div class="about-us__container">
+                    <div class="about-us__content">
+                        <h2 class="title">About Us</h2>
+                        <p class="subtitle">
+                            Our hotel is founded in 2014 and since opening the doors, 
+                            our missing is to provide the best care to our guests. 
+                            We are pet lovers and we made our hotel the best place for 
+                            your four legged friends to feel them safe and loved<span id="about-dots" class="dots">...</span>
+                            <span id="about-more" class="more">
+                            . Our friendly and pet lover staff awaiting your pet arrival and 
+                            you can be sure that your furry family member will be in safe 
+                            and caring hands. Our hotel will become the perfect home away 
+                            from home for your pet.</span>
+                        </p>
+                        <span id="about" class=" more__link">Read more</span>
+                    </div>
+                </div>
+            </section>
+            <section id="camera-section" class="camera">
+                <div class="camera__container">
+                    <div class="camera__content">
+                        <div class="image-block">
+                            <img src="./images/camera/monitor1.png" class="monitor" alt="Monitor">
+                            <img src="./images/camera/pet1.png" class="pet" alt="Dog">
+                        </div>
+                        <div class="stream hidden">
+                            <iframe
+                              src="https://www.youtube.com/embed/NsUWXo8M7UA">
+                            </iframe>
+                        </div>
+                        <button class="button camera__button">I want to see my pet!</button>
+                    </div>
+                </div>
+            </section>
+            <section id="gallery-section" class="gallery">
+                <div class="gallery__container">
+                    <div class="gallery__content">
+                        <div class="slide">
+                            <img src="./images/gallery/1.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/2.jpg"" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/3.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/4.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/6.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/7.jpg" class="slide-img" alt="Cat" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/8.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/12.jpg" class="slide-img" alt="Cat" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/0.jpg" class="slide-img" alt="Cat" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/10.jpg" class="slide-img" alt="Dog" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/11.jpg" class="slide-img" alt="Cat" />
+                        </div>
+                        <div class="slide">
+                            <img src="./images/gallery/9.jpg" class="slide-img" alt="Cat" />
+                        </div>
+                    </div>
+                    <button class="left-arrow arrow"><</button>
+                    <button class="right-arrow arrow">></button>
+                </div>
+            </section>
+            <section id="important-section" class="important">
+                <div class="important__container">
+                    <h2 class="title info__title info__title-main">Important Information</h2>
+                    <div class="important__content">
+                        <div class="info-card">
+                            <h3 class="title info__title">Special needs</h3>
+                            <p class="subtitle info__subtitle">
+                                We feed all pets with premium quality food and strictly 
+                                maintaining the diet. But still, if your pet has any allergies, 
+                                intolerance to any food ingredients or any special needs, 
+                                then please agree the food with our staff in advance or provide 
+                                food for feeding the pet during your stay at our hotel.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="title info__title">Prices</h3>
+                            <p class="subtitle info__subtitle price-list">
+                                Dogs up to 10kg - $35 per night<br>
+                                Dogs 10-20kg - $40 per night<br>
+                                Dogs 20+kg - $50 per night<br>
+                                Cats - 30$ per night
+                                <br>
+                                <span>*20% sale for booking more than one room</span>
+                            </p>
+                        </div>
+                        <div class="info-card">
+                            <h3 class="title info__title">Vaccination requirements</h3>
+                            <p class="subtitle info__subtitle">
+                                We care about the health of all our furry guests is, 
+                                that's why not vaccinated pets are not allowed in our 
+                                hotel.Vaccinations must be administered at least 48 
+                                hours prior to arrival under the guidance of a licensed 
+                                veterinarian. However, we prefer vaccinations be 
+                                administered 10-14 days before check-in to ensure maximum 
+                                efficiency. Written proof is required. You must also show 
+                                proof of your pet meeting state and local pet boarding 
+                                vaccination requirements.
+                            </p>
+                        </div>
+                        <div class="info-card">
+                        <h3 class="title info__title">Cancellation and refund</h3>
+                            <p class="subtitle info__subtitle">
+                                We are working hard to provide best services to our guests and 
+                                we are preparing rooms and playing spaces, food, etc. after your 
+                                booking is confirmed. So please be sure that you warned us 
+                                beforehand if your arrival is going to delay or cancel.  
+                                Refund policy is: 
+                                <br>
+                                More than 24 hours before check-in date: FREE CANCELLATION<br>
+                                0-24 hours before check-in date: 1 night cost will be charged as cancellation fee<br>
+                                In case of no show: Entire booking cost will be charged as cancellation fee<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section id="ads-section" class="ads">
+            <div class="ads__container">
+                <div class="ads__content">
+                    <div class="ads__grid">
+                        <div class="text__grid subtitle">
+                            If you have lost your pet, please upload it's photo and necessary Information
+                            here and contact our support team. We will try our best to help you find your
+                            beloved four-legged friend.
+                        </div>
+                        <div class="form__grid">
+                            <form id="uploadForm"">
+                                <!-- <div class="ads__grp">
+                                    <label for="ads-petname" id="petname-label">Pet name</label>
+                                    <input type="text" name="petname" id="ads-petname" required>
+                                </div>
+                                <div class="ads__grp">
+                                    <label for="ads-place" id="place-label">Last place seen</label>
+                                    <input type="text" name="place" id="ads-place" required>
+                                </div> -->
+                                <div class="ads-send__grp">
+                                    <div class="ads-send__grp-inp">
+                                        <input type="file" id="myFiles" class="inputfile" accept="image/*" multiple onchange="previewFile()">
+                                        <label for="myFiles" id="photo-label">Choose pet photo</label><br>
+                                        <img src="" id="image">
+                                    </div>
+                                    <div class="ads-send__grp-btn">
+                                        <input type="submit" id="submit-msg" class=" ads__btn" value="Send">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__content">
+                    <div class="address__block">
+                        <h2 class="title footer__title">Address</h2>
+                        <p class="subtitle footer__subtitle">60 Svachyan St. Yerevan</p>
+                    </div>
+                    <div class="contacts__block">
+                        <h2 class="title footer__title">Contacts</h2>
+                        <p class="subtitle footer__subtitle">Email: manulph@gmail.com</p>
+                        <p class="subtitle footer__subtitle">Phone: +374(41)509559</p>
+                    </div>
+                    <div class="send-msg__block">
+                        <form id="send-msg" action="/comments" method="post">
+                            <div class="send-msg__grp">
+                                <label for="name-contact" id="name-label">Name</label>
+                                <input type="text" name="name" id="name-contact" required>
+                            </div>
+                            <div class="send-msg__grp">
+                                <label for="email-contact" id="email-label">Email</label>
+                                <input type="email" name="email" id="email-contact" title="username@gmail.com" required>
+                            </div>
+                            <div class="send-msg__grp">
+                                <label for="comments-contact" id="comments-label">Message</label>
+                                <textarea name="comments" id="comments-contact"></textarea>
+                            </div>
+                            <div class="send-msg__grp">
+                                <button id="submit-msg" class="button footer__btn">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="map__block">
+                        <iframe width="470" height="280" id="gmap_canvas" src="https://maps.google.com/maps?q=Yerevan%20svachyan%2060&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                    <div class="copyrigth__block">
+                        &#169;Copyright 2022. All Rights Reserved || Designed By D. Hayrapetyan
+                    </div>
+                    <div class="social__block">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="./images/footer/youtube.png" alt="YouTube icon">
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="./images/footer/instagram.png" alt="Instagram icon">
+                        </a>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./images/footer/fb.png" alt="Facebook icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function previewFile() {
+            const preview = document.querySelector('#image');
+            const file = document.querySelector('input[type=file]').files[0];
+            const reader  = new FileReader();
+            reader.onloadend = function () {
+            preview.src = reader.result;
+            }
+            if (file) {
+            reader.readAsDataURL(file);
+            console.log(file.name)
+            } else {
+            preview.src = "";
+            }
+        }
+    </script>
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

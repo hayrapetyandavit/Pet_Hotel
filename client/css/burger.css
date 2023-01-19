@@ -1,0 +1,47 @@
+.icon-menu {
+    display: none;
+}
+@media (max-width: 767.98px) {
+    .icon-menu {
+        display: flex;
+        position: relative;
+        flex:  0 0 30px;
+        height: 18px;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px 0px 0px 20px;
+    }
+    .icon-menu::before,
+    .icon-menu::after {
+        content: "";
+        background-color: var(--nigth-blue-shadow);
+        height: 2px;
+    }
+    .icon-menu span {
+        height: 2px;
+        background-color: var(--nigth-blue-shadow);
+    }
+    .close-icon-menu {
+        display: none;
+        flex: 0 0 30px;
+        height: 30px;
+        position: relative;
+        margin: 0px 0px 0px 20px;
+    }
+    .close-icon-menu::before,
+    .close-icon-menu::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: var(--nigth-blue-shadow);
+        height: 2px;
+        width: 100%;
+    }
+    .close-icon-menu::before {
+        transform: rotate(45deg);
+    }
+    .close-icon-menu::after {
+        transform: rotate(-45deg);
+    }
+}
